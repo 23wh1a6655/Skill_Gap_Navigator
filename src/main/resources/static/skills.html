@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+<title>Skill Analyzer</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>SkillGap</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="skills.html">Analyze Skills</a>
+<a href="roadmap.html">Roadmap</a>
+<a href="quiz.html">Quiz</a>
+
+</div>
+
+
+<div class="main">
+
+<h1>Skill Gap Analyzer</h1>
+
+
+<!-- STEP 1 ROLE SELECTION -->
+
+<select id="role" onchange="showRoleSkills()">
+
+<option value="">Select Role</option>
+
+<option value="Backend Developer">Backend Developer</option>
+<option value="Data Scientist">Data Scientist</option>
+<option value="DevOps Engineer">DevOps Engineer</option>
+<option value="Frontend Developer">Frontend Developer</option>
+<option value="Full Stack Developer">Full Stack Developer</option>
+<option value="Mobile App Developer">Mobile App Developer</option>
+
+</select>
+
+<h4 class="skills-heading">Required Skills for the Given Role</h4>
+
+<div id="recommendedSkills"></div>
+<!-- STEP 2 CURRENT SKILLS -->
+
+<div class="card">
+
+<h3>Step 2: Add Your Current Skills</h3>
+
+<select id="skillSelect">
+
+<option value="">Select Skill</option>
+
+<option>HTML</option>
+<option>CSS</option>
+<option>JavaScript</option>
+<option>React</option>
+<option>NodeJS</option>
+
+<option>Java</option>
+<option>Spring Boot</option>
+<option>SQL</option>
+<option>REST API</option>
+<option>Git</option>
+
+<option>Python</option>
+<option>Statistics</option>
+<option>Excel</option>
+<option>Machine Learning</option>
+<option>Data Visualization</option>
+
+<option>Linux</option>
+<option>Docker</option>
+<option>Kubernetes</option>
+<option>CI/CD</option>
+
+<option>Kotlin</option>
+<option>Android Studio</option>
+<option>Firebase</option>
+
+</select>
+
+
+<select id="skillLevel">
+
+<option value="">Select Level</option>
+<option value="Beginner">Beginner</option>
+<option value="Intermediate">Intermediate</option>
+<option value="Advanced">Advanced</option>
+
+</select>
+
+
+<button onclick="addSkill()">Add Skill</button>
+
+
+<div id="skillList"></div>
+
+</div>
+
+
+<!-- STEP 3 -->
+
+<div class="card">
+
+<h3>Generate Learning Roadmap</h3>
+
+<button onclick="analyzeSkills()">Generate Roadmap</button>
+
+</div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
